@@ -14,7 +14,7 @@ const SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets'
 ];
 const auth = new google.auth.GoogleAuth({
-    keyFile: './cv-pipeline-01-92372bcf22b4.json',
+    keyFile: './cv-pipeline-01-e5f9b9a2b1be.json',
     scopes: SCOPES,
 });
 const sheets = google.sheets({ version: 'v4', auth });

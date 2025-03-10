@@ -28,7 +28,7 @@ const SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets"
 ];
 const auth = new google.auth.GoogleAuth({
-    keyFile: "./cv-pipeline-01-92372bcf22b4.json", // Update with your credentials file path
+    keyFile: "./cv-pipeline-01-e5f9b9a2b1be.json", // Update with your credentials file path
     scopes: SCOPES
 });
 
