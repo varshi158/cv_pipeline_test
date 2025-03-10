@@ -22,13 +22,15 @@ app.use(bodyParser.json());
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
+const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+
 // Google Drive authentication using service account
 const SCOPES = [
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/spreadsheets"
 ];
 const auth = new google.auth.GoogleAuth({
-    keyFile: "./cv-pipeline-01-e5f9b9a2b1be.json", // Update with your credentials file path
+    keyFile: serviceAccount, // Update with your credentials file path
     scopes: SCOPES
 });
 

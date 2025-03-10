@@ -9,12 +9,14 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+
 const SCOPES = [
     'https://www.googleapis.com/auth/drive.file',
     'https://www.googleapis.com/auth/spreadsheets'
 ];
 const auth = new google.auth.GoogleAuth({
-    keyFile: './cv-pipeline-01-e5f9b9a2b1be.json',
+    keyFile: serviceAccount,
     scopes: SCOPES,
 });
 const sheets = google.sheets({ version: 'v4', auth });
